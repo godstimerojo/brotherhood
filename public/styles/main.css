@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #111, #242424);
+}
+
+header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+header button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: white;
+  color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header button:hover{
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.about-us{
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background-color: #f5f5f5;
+  color: #111;
+  text-align: center;
+}
+
+.about-us h2{
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-us ul {
+  list-style: none;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.about-us li {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background-color: rgb(255, 254, 254);
+  border-radius: 0.75rem;
+  border-left: 0.3rem solid #f59e0b;
+  box-shadow: 0 0.25rem 1rem #0d0d0d14;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us li:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+.photo-section {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+.photo-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.photo-container {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-container img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.brotherhood-facts {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background-color: #f59e0b;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.brotherhood-facts h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.fact-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+#fact {
+  max-width: 40rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#factButton {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #111;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#factButton:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.final-message {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background-color: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.final-message > p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+
+.final-message h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+#finalMessage {
+  padding: 1rem 2rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hidden-message {
+  display: none;
+  max-width: 40rem;
+  margin-top: 3rem;
+}
+
+.hidden-message.show {
+  display: block;
+}
+
+.hidden-message h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hidden-message p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+
+
+#fact.fade-out {
+  opacity: 0;
+  transform: translateY(0.5rem);
+}
+
+
+
+/* LOGIN PAGE */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #111, #242424);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 25rem;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  color: #111;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-container p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.75rem;
+}
+
+.login-container input {
+  padding: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.login-container button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f59e0b;
+  color: #111;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.error-message {
+  color: #9f1919 !important;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+
+
+@media screen and (max-width: 48rem) {
+  .photo-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .photo-container {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .about-us h2,
+  .photo-section h2,
+  .brotherhood-facts h2 {
+    font-size: 2rem;
+  }
+
+  .final-message h2 {
+    font-size: 2.5rem;
+  }
+}
+
