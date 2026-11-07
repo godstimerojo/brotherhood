@@ -14,14 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const db = new pg.Client({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
-// db.connect();
 
 db.connect()
   .then(() => {
@@ -43,8 +41,8 @@ app.post("/login", async (req, res) => {
   const password = req.body.password;
 
   const result = await db.query(
-    "SELECT * FROM users WHERE username = $1",
-    [username]
+  "SELECT * FROM brotherhood_users WHERE username = $1",
+  [username]
   );
 
   const user = result.rows[0];
